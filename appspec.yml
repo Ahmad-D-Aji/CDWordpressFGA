@@ -4,11 +4,11 @@ files:
   - source: /
     destination: /var/www/html/WordPress
 permissions:
-  - object: /var/www/html/
+  - object: /var/www/html/WordPress/scripts
     mode: 755
     pattern: "**"
-    owner: root
-    group: root
+    owner: ec2user
+    group: ec2user
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
