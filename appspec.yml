@@ -3,6 +3,12 @@ os: linux
 files:
   - source: /
     destination: /var/www/html/WordPress
+permissions:
+  - object: /var/www/html/
+    mode: 755
+    pattern: "**"
+    owner: root
+    group: root
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
